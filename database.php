@@ -3,6 +3,8 @@
     //Mysql
     const DBDRIVE = 'mysql';
     const DBHOST = 'localhost';
-    const DBNAME = 'serie_login';
+    const DBNAME = '4.events';
     const DBUSER = 'root';
-    const DBPASS = '';
+    const DBPASS = 'root';
+
+

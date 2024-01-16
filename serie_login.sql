@@ -25,26 +25,22 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `user`
+-- Estrutura da tabela `produto`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(200) NOT NULL,
-  `password` varchar(300) NOT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `user`
+CREATE TABLE `produto` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `CD_produto` varchar(100) DEFAULT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `valor` varchar(45) DEFAULT NULL,
+  `descricao` text,
+  `quantidade` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+-- Extraindo dados da tabela `produto`
 --
 
-INSERT INTO `user` (`id`, `email`, `password`, `name`) VALUES
-(1, 'rafa@gmail.com', '123', 'Rafa'),
-(2, 'bruno@gmail.com', '123', 'asdasd');
+INSERT INTO `4.events`.`produto` (`CD_produto`, `nome`, `valor`, `descricao`, `quantidade`) VALUES ('12', 'xadrez', '12,5', 'muito bom', '2');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
